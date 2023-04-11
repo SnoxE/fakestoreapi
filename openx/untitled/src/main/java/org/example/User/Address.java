@@ -22,4 +22,13 @@ public class Address
     public String getStreet() { return street; }
     public int getNumber() { return number; }
     public String getZipcode() { return zipcode; }
+
+    public double distanceFrom(User u)
+    {
+        Geolocation g = u.getAddress().getGeolocation();
+        double latitudinalDistance = g.getLatitude() - this.geolocation.getLatitude();
+        double longitudinalDistance = g.getLongitude() - this.geolocation.getLongitude();
+
+        return Math.sqrt(latitudinalDistance * latitudinalDistance + longitudinalDistance * longitudinalDistance);
+    }
 }

@@ -13,4 +13,10 @@ public class Name
 
     public String getFirstname() { return firstname; }
     public String getLastname() { return lastname; }
+
+    @Override
+    public String toString()
+    {
+        return firstname + " " + lastname;
+    }
 }

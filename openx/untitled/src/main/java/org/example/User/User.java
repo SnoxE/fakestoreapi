@@ -62,5 +62,32 @@ public class User
 
 
     // utilities
-    public static void usersFurthestApart()
+    public static void usersFurthestApart(List<User> userList)
+    {
+        double maxDistance = 0;
+        int outerMaxIndex = 0;
+        int innerMaxIndex = 0;
+
+        for(int i = 0; i < userList.size(); i++)
+        {
+            for(int j = i + 1; j < userList.size(); j++)
+            {
+                User outerLoopUser = userList.get(i);
+                User innerLoopUser = userList.get(j);
+
+                if(outerLoopUser.getAddress().distanceFrom(innerLoopUser) > maxDistance)
+                {
+                    maxDistance = outerLoopUser.getAddress().distanceFrom(innerLoopUser);
+                    outerMaxIndex = i;
+                    innerMaxIndex = j;
+                }
+            }
+        }
+
+        User u1 = userList.get(outerMaxIndex);
+        User u2 = userList.get(innerMaxIndex);
+
+        System.out.println("The biggest distance between users is between " + u1.getName()
+                + " and " + u2.getName() + " and is equal to " + maxDistance);
+    }
 }

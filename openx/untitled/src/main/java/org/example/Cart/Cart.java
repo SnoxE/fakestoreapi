@@ -68,6 +68,6 @@ public class Cart
         }
 
         System.out.println("Max value of a cart is: " + maxValue +
-                "\nThe owner of that cart is: " + firstname + " " + lastname + "\n");
+                "\nThe owner of that cart is " + firstname + " " + lastname + "\n");
     }
 }
