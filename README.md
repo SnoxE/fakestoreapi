@@ -1,2 +1,2 @@
 # fakestoreapi
- OpenX recruitment task
+ Szymon Moździerz - OpenX recruitment task
