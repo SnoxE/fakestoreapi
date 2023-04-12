@@ -1,13 +1,7 @@
-package org.example;
+package org.example.repository;
 
-import org.example.Cart.Cart;
-import org.example.Cart.CartProduct;
-import org.example.Product.Product;
-import org.example.Product.Rating;
-import org.example.User.Address;
-import org.example.User.Geolocation;
-import org.example.User.Name;
-import org.example.User.User;
+import org.example.model.*;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -18,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class JSONparsing
+public class DataRepository
 {
     public static List<User> getUsersFromJSON(String usersURL)
     {

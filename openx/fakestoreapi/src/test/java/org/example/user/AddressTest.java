@@ -1,5 +1,7 @@
-package org.example.User;
+package org.example.user;
 
+import org.example.model.Address;
+import org.example.model.Geolocation;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,7 +14,7 @@ public class AddressTest
         Geolocation g = new Geolocation(37.7749, -122.4194);
         Address address = new Address(g, "San Francisco", "Warriors Way", 1, "94158");
 
-        assertEquals(g, address.getGeolocation());
+        assertEquals(g, address.geolocation());
     }
 
     @Test

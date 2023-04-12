@@ -1,5 +1,10 @@
-package org.example.User;
+package org.example.user;
 
+import org.example.model.Address;
+import org.example.model.Geolocation;
+import org.example.model.Name;
+import org.example.model.User;
+import org.example.service.UserService;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -177,6 +182,6 @@ class UserTest {
         String expectedOutput = "The biggest distance between users is between " + "Klay Thompson"
                 + " and " + "Draymond Green" + " and is equal to " + (double)10;
 
-        assertEquals(expectedOutput, User.usersFurthestApart(userList));
+        assertEquals(expectedOutput, UserService.usersFurthestApart(userList));
     }
 }
