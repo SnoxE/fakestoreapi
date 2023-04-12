@@ -42,6 +42,6 @@ public class Main
         for(Object o : categoryValue.keySet())
             System.out.println("Value of " + o + " equals " + categoryValue.get(o.toString()));
 
-        User.usersFurthestApart(userList);
+        System.out.println(User.usersFurthestApart(userList));
     }
 }

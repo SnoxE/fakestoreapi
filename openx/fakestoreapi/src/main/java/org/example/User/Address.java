@@ -23,9 +23,9 @@ public class Address
     public int getNumber() { return number; }
     public String getZipcode() { return zipcode; }
 
-    public double distanceFrom(User u)
+    public double distanceFrom(Address a)
     {
-        Geolocation g = u.getAddress().getGeolocation();
+        Geolocation g = a.getGeolocation();
         double latitudinalDistance = g.getLatitude() - this.geolocation.getLatitude();
         double longitudinalDistance = g.getLongitude() - this.geolocation.getLongitude();
 

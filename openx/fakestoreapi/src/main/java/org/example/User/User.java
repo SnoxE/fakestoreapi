@@ -35,12 +35,11 @@ public class User
     public Name getName() { return name; }
     public String getPhone() { return phone; }
 
-    @Override
-    public String toString()
-    {
-        return "id: " + id + "\nemail: " + email + "\n";
-    }
-
+//    @Override
+//    public String toString()
+//    {
+//        return "id: " + id + "\nemail: " + email + "\n";
+//    }
 
     public static int findUserIndex(List<User> userList, int id)
     {
@@ -62,7 +61,7 @@ public class User
 
 
     // utilities
-    public static void usersFurthestApart(List<User> userList)
+    public static String usersFurthestApart(List<User> userList)
     {
         double maxDistance = 0;
         int outerMaxIndex = 0;
@@ -75,9 +74,9 @@ public class User
                 User outerLoopUser = userList.get(i);
                 User innerLoopUser = userList.get(j);
 
-                if(outerLoopUser.getAddress().distanceFrom(innerLoopUser) > maxDistance)
+                if(outerLoopUser.getAddress().distanceFrom(innerLoopUser.getAddress()) > maxDistance)
                 {
-                    maxDistance = outerLoopUser.getAddress().distanceFrom(innerLoopUser);
+                    maxDistance = outerLoopUser.getAddress().distanceFrom(innerLoopUser.getAddress());
                     outerMaxIndex = i;
                     innerMaxIndex = j;
                 }
@@ -87,7 +86,7 @@ public class User
         User u1 = userList.get(outerMaxIndex);
         User u2 = userList.get(innerMaxIndex);
 
-        System.out.println("The biggest distance between users is between " + u1.getName()
-                + " and " + u2.getName() + " and is equal to " + maxDistance);
+        return "The biggest distance between users is between " + u1.getName()
+                + " and " + u2.getName() + " and is equal to " + maxDistance;
     }
 }
