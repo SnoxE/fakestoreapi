@@ -45,8 +45,8 @@ public class Main
         System.out.println("All categories and their values are: \n");
         CartService.findMaxCartValue(cartList, productList, userList);
 
-        for(Object o : categoryValue.keySet())
-            System.out.println("Value of " + o + " equals " + categoryValue.get(o.toString()));
+        for(Object object : categoryValue.keySet())
+            System.out.println("Value of " + object + " equals " + categoryValue.get(object.toString()));
 
         // task4
         System.out.println(UserService.usersFurthestApart(userList));
