@@ -41,14 +41,17 @@ public class Main
                 categoryValue.put(p.category(), p.price());
         }
 
-        // task3
-        System.out.println("All categories and their values are: \n");
-        CartService.findMaxCartValue(cartList, productList, userList);
-
+        System.out.println("Task 2\nAll categories and their values are: ");
         for(Object object : categoryValue.keySet())
             System.out.println("Value of " + object + " equals " + categoryValue.get(object.toString()));
+        System.out.println();
+
+        // task3
+        System.out.println("Task3");
+        CartService.findMaxCartValue(cartList, productList, userList);
 
         // task4
+        System.out.println("Task4");
         System.out.println(UserService.usersFurthestApart(userList));
     }
 }
